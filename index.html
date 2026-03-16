@@ -1,94 +1,301 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skina da Ração - Hub Digital</title>
     <link rel="icon" type="image/png" href="favicon.png">
-
-    <!-- CSS mínimo -->
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.5; }
-        header, section, footer { padding: 20px; }
-        h1, h2, h3, h4 { font-weight: bold; }
-        img { max-width: 100%; height: auto; display: block; }
-        nav a { margin-right: 15px; text-decoration: none; font-weight: bold; }
-        a { color: #000; }
-        .bloco { margin-bottom: 40px; }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
 
-<header>
-    <h1>Skina da Ração</h1>
-    <p>Aviário e Acessórios</p>
+    <!-- HEADER -->
+    <header class="fixed top-0 w-full bg-white/80 backdrop-blur-xl shadow-sm z-50 border-b border-slate-200">
+        <div class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="flex flex-col">
+                    <span class="font-black text-blue-900 leading-none text-xl tracking-tighter uppercase">Skina da Ração</span>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Aviário e Acessórios</span>
+                </div>
+            </div>
 
-    <nav>
-        <a href="#pets">Mundo Pet</a>
-        <a href="#beleza">Banho & Tosa</a>
-        <a href="#doces">Doces & Gelados</a>
-    </nav>
+            <nav class="hidden lg:flex gap-10 text-sm font-bold uppercase tracking-widest text-slate-500">
+                <a href="#pets" class="hover:text-blue-900 transition-colors">Mundo Pet</a>
+                <a href="#beleza" class="hover:text-blue-900 transition-colors">Banho & Tosa</a>
+                <a href="#doces" class="hover:text-blue-900 transition-colors">Doces & Gelados</a>
+            </nav>
 
-    <a href="https://wa.me/5541992755933">Pedir Agora</a>
-</header>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/5541992755933" class="hidden sm:block bg-blue-900 text-white px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-tighter shadow-lg hover:bg-blue-800 transition-all">
+                    Pedir Agora
+                </a>
+                <button class="lg:hidden text-blue-900 text-2xl"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
 
-<main>
+    <main class="pt-24 pb-20 px-4 md:px-8 max-w-screen-xl mx-auto">
 
-<section class="bloco">
-    <h2>Tudo para seu Pet.</h2>
-    <p>O cuidado que seu pet merece no coração do bairro Tingui.</p>
+        <!-- HERO -->
+        <section class="relative mb-16">
+            <div class="grid lg:grid-cols-2 gap-8 items-center bg-blue-900 rounded-[2rem] overflow-hidden shadow-2xl min-h-[500px]">
 
-    <a href="https://wa.me/5541992755933">WhatsApp</a>
-    <a href="https://www.instagram.com/skinaracao/">Instagram</a>
+                <!-- TEXTO -->
+                <div class="p-8 md:p-16 text-center lg:text-left">
+                    <h2 class="text-4xl md:text-6xl font-black text-white mb-6 leading-[0.9]">
+                        Tudo para seu <span class="text-yellow-400">Pet</span>.
+                    </h2>
+                    <p class="text-blue-100 text-lg md:text-xl mb-10 max-w-xl">
+                        O cuidado que seu pet merece com a conveniência que você busca no coração do bairro Tingui.
+                    </p>
 
-    <img src="petfather.jpg" alt="Pet com tutor">
-</section>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/5541992755933" class="bg-green-500 text-white flex items-center gap-3 px-8 py-4 rounded-2xl font-black text-lg shadow-xl hover:bg-green-400 transition-all">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://www.instagram.com/skinaracao/" class="bg-white/10 backdrop-blur-md text-white border border-white/20 flex items-center gap-3 px-8 py-4 rounded-2xl font-black text-lg hover:bg-white/20 transition-all">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                </div>
 
-<section class="bloco" id="categorias">
-    <h2>Nossos Departamentos</h2>
+                <!-- IMAGEM HERO AJUSTADA -->
+                <div class="hidden lg:flex items-end justify-center h-[480px] overflow-hidden rounded-3xl p-6">
+                    <img src="petfather.jpg"
+                         class="w-full h-full object-cover rounded-3xl shadow-xl">
+                </div>
 
-    <h3>🍖 Alimentação & Nutrição</h3>
-    <p>Rações premium, grãos e petiscos.</p>
+            </div>
+        </section>
 
-    <h3>🧼 Higiene e Saúde</h3>
-    <p>Shampoos, areias e itens veterinários.</p>
+ 
+        <!-- Seção de Categorias: Hub Digital Skina da Ração -->
+        <section id="categorias" class="py-16 px-6 max-w-[1400px] mx-auto bg-slate-50">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-black uppercase tracking-[0.3em] text-[10px] mb-3 block">Nossos Departamentos</span>
+                <h3 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-none">
+                    Excelência em <span class="text-blue-900 italic">Cada Setor</span>
+                </h3>
+                <p class="mt-4 text-slate-500 font-medium max-w-2xl mx-auto">
+                    O Que Voce Encontra Na Skina.
+                </p>
+            </div>
 
-    <h3>🎾✂️ Acessórios e Lazer</h3>
-    <p>Brinquedos e itens de estética animal.</p>
+            <!-- Grid de Cards Maiores (2 colunas para alto impacto visual) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
+                
+                <!-- Categoria 1: Alimentação & Nutrição -->
+                <div class="group bg-white rounded-[3rem] shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100 flex flex-col">
+                    <!-- Seção de "Foto" com Emoji -->
+                    <div class="h-64 lg:h-80 bg-amber-50 flex items-center justify-center text-8xl lg:text-9xl group-hover:scale-110 transition-transform duration-500">
+                        🍖
+                    </div>
+                    <div class="p-10 text-center">
+                        <h4 class="font-black text-3xl text-slate-900 mb-4 uppercase">Alimentação & Nutrição</h4>
+                        <p class="text-slate-500 text-lg mb-8 leading-relaxed">
+                            Rações premium, grãos a granel e petiscos selecionados para cães, gatos e aves.
+                        </p>
+                        <a href="https://wa.me/5541992755933" class="inline-block bg-blue-900 text-white px-10 py-4 rounded-2xl font-black text-sm uppercase shadow-lg hover:bg-blue-800 transition">Ver Opções no Whats</a>
+                    </div>
+                </div>
 
-    <h3>🍦 Petiscos e Sorvetes</h3>
-    <p>Bombons e sorvetes La Bonnelli.</p>
-</section>
+                <!-- Categoria 2: Higiene e Saúde -->
+                <div class="group bg-white rounded-[3rem] shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100 flex flex-col">
+                    <!-- Seção de "Foto" com Emoji -->
+                    <div class="h-64 lg:h-80 bg-cyan-50 flex items-center justify-center text-8xl lg:text-9xl group-hover:scale-110 transition-transform duration-500">
+                        🧼
+                    </div>
+                    <div class="p-10 text-center">
+                        <h4 class="font-black text-3xl text-slate-900 mb-4 uppercase">Higiene e Saúde</h4>
+                        <p class="text-slate-500 text-lg mb-8 leading-relaxed">
+                            Shampoos, areias sanitárias e itens de farmácia veterinária de marcas líderes.
+                        </p>
+                        <a href="https://wa.me/5541992755933" class="inline-block bg-blue-900 text-white px-10 py-4 rounded-2xl font-black text-sm uppercase shadow-lg hover:bg-blue-800 transition">Consultar no Whats</a>
+                    </div>
+                </div>
 
-<section class="bloco" id="empresa">
-    <h2>No Coração de Curitiba</h2>
-    <p>A Skina da Ração é referência em artigos para seu pet.</p>
+                <!-- Categoria 3: Acessórios e Lazer (Incluindo Banho e Tosa) -->
+                <div class="group bg-blue-900 rounded-[3rem] shadow-xl transition-all duration-500 overflow-hidden flex flex-col">
+                    <!-- Seção de "Foto" com Emoji -->
+                    <div class="h-64 lg:h-80 bg-white/10 flex items-center justify-center text-8xl lg:text-9xl group-hover:scale-110 transition-transform duration-500">
+                        🎾✂️
+                    </div>
+                    <div class="p-10 text-center text-white">
+                        <h4 class="font-black text-3xl mb-4 uppercase">Acessórios e Lazer</h4>
+                        <p class="text-blue-100 text-lg mb-8 leading-relaxed">
+                            Brinquedos recreativos e de estética animal para o bem-estar pet.
+                        </p>
+                        <a href="https://wa.me/5541992755933" class="inline-block bg-white text-blue-900 px-10 py-4 rounded-2xl font-black text-sm uppercase shadow-lg transition hover:bg-blue-50">Compre Agora</a>
+                    </div>
+                </div>
 
-    <img src="petbuy.jpg" alt="Cliente comprando para o pet">
-</section>
+                <!-- Categoria 4: Conveniência e Sorvetes (La Bonnelli) -->
+                <div class="group bg-orange-500 rounded-[3rem] shadow-xl transition-all duration-500 overflow-hidden flex flex-col">
+                    <!-- Seção de "Foto" com Emoji -->
+                    <div class="h-64 lg:h-80 bg-white/20 flex items-center justify-center text-8xl lg:text-9xl group-hover:scale-110 transition-transform duration-500 drop-shadow-2xl">
+                        🍦
+                    </div>
+                    <div class="p-10 text-center text-white">
+                        <h4 class="font-black text-3xl mb-4 uppercase">Petiscos e Sorvetes</h4>
+                        <p class="text-orange-50 text-lg mb-8 leading-relaxed">
+                            Bombons e sorvetes deliciosos da linha La Bonnelli para refrescar o seu dia [4, 12].
+                        </p>
+                        <a href="https://wa.me/5541992755933" class="inline-block bg-white text-orange-600 px-10 py-4 rounded-2xl font-black text-sm uppercase shadow-lg transition hover:bg-orange-50">Ver Cardápio</a>
+                    </div>
+                </div>
 
-<footer class="bloco">
-    <img src="bussines.png" alt="Conexão Pet Skina">
+            </div>
+        </section>
 
-    <h2>Onde a Tecnologia Encontra o Cuidado</h2>
-    <p>Inovação para conectar serviços em um só lugar.</p>
+        <!-- EMPRESA -->
+        <section id="empresa" class="mb-20 grid md:grid-cols-2 gap-12 items-center bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
+            <div>
+                <h3 class="text-blue-900 font-black uppercase tracking-widest text-xs mb-4">Nossa História</h3>
+                <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">No Coração de Curitiba</h2>
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    A <strong>Skina da Ração</strong> é um ponto de referência em artigos para seu pet.
+                </p>
 
-    <h3>Contato</h3>
-    <p>+55 (41) 99275-5933</p>
-    <p>Instagram e WhatsApp disponíveis.</p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center text-green-600"><i class="fas fa-check-circle"></i></div>
+                        <span class="font-bold text-sm text-slate-700">Pet Lover</span>
+                    </div>
 
-    <h3>Endereço</h3>
-    <p>Rua Luiza Verone Piccoli, 150 — Tingui, Curitiba</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600"><i class="fas fa-store"></i></div>
+                        <span class="font-bold text-sm text-slate-700">Loja Física</span>
+                    </div>
+                </div>
+            </div>
 
-    <h3>Dados da Empresa</h3>
-    <p>Skina da Ração Ltda — CNPJ 46.425.646/0001-11</p>
+            <div class="relative">
+                <div class="w-full h-72 rounded-2xl overflow-hidden bg-slate-50">
+                    <img src="petbuy.jpg" class="w-full h-full object-cover">
+                </div>
 
-    <p>Desenvolvedor: Samuel Junio — 2026</p>
-</footer>
+                <div class="absolute -bottom-6 -left-6 bg-blue-900 text-white p-6 rounded-2xl shadow-xl">
+                    <span class="block font-black text-2xl">+Ofertas</span>
+                    <span class="text-[10px] uppercase font-bold opacity-70">venha conhecer</span>
+                </div>
+            </div>
+        </section>
 
-<a href="https://wa.me/5541992755933">WhatsApp</a>
+        <!-- FOOTER -->
+        <footer class="bg-white rounded-[2rem] p-10 border border-slate-100 shadow-sm">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Lado da Foto: Preenchida e com Cantos Arredondados -->
+                <div class="w-full lg:w-1/2 h-[400px] md:h-[500px] overflow-hidden rounded-[3rem] shadow-2xl group">
+                    <img src="bussines.png" 
+                        alt="Conexão Pet Skina" 
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
 
-</main>
+                <!-- Lado do Texto: Inovação, Conexão e Vendas -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left py-16">
+                    <span class="text-blue-600 font-black uppercase tracking-[0.3em] text-xs mb-4 block">Venda Digital</span>
+                    <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-6 leading-[0.9] tracking-tighter">
+                        Onde a <span class="text-blue-900">Tecnologia</span> Encontra o <span class="text-blue-900 italic">Cuidado</span>.
+                    </h2>
+                    
+                    <div class="space-y-6 text-slate-600 font-medium text-lg leading-relaxed">
+                        <p>
+                            Na **Skina da Ração** utilizamos a inovação para superar o tempo e a distância, conectando todos os nossos serviços em um só lugar para o oferecer o melhor pro seu pet.
+                        </p>
+                        <p>
+                            Nossa plataforma foi desenhada para criar uma **conexão estratégica** com a comunidade do bairro Tingui e Curitiba, transformando a vitrine digital e atendimento personalizado via WhatsApp.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+
+                <!-- COLUNA 1 -->
+                <div class="max-w-sm">
+                    <p class="font-black text-slate-800 text-lg mb-1 uppercase">+55 (41) 99275-5933</p>
+                    <p class="text-slate-500 font-medium leading-relaxed mb-8">
+                        Modernizando o comércio local no Tingui com tecnologia e carinho pelos animais.
+                    </p>
+
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/skinaracao/" class="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600 hover:bg-blue-900 hover:text-white transition-all">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/5541992755933" class="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600 hover:bg-green-500 hover:text-white transition-all">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- COLUNA 2 -->
+                <div>
+                    <h5 class="font-black text-blue-900 uppercase tracking-widest text-sm mb-8">Onde Estamos</h5>
+
+                    <div class="flex gap-4 mb-6">
+                        <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <p class="text-slate-600 font-bold leading-tight">
+                            Rua Luiza Verone Piccoli, 150<br>
+                            <span class="text-sm font-medium text-slate-400">Tingui, Curitiba - PR | 82600-220</span>
+                        </p>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <p class="text-slate-600 font-bold leading-tight">
+                            skina.pet.racao@gmail.com<br>
+                            <span class="text-sm font-medium text-slate-400">E-mail</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- COLUNA 3 -->
+                <div class="flex flex-col md:items-end">
+                    <h5 class="font-black text-blue-900 uppercase tracking-widest text-sm mb-8">Dados da Empresa</h5>
+
+                    <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 w-full text-center lg:text-right">
+                        <p class="font-black text-slate-800 text-lg mb-1 uppercase">Skina da Ração Ltda</p>
+                        <p class="text-xs font-black text-slate-400 tracking-widest mb-4">CNPJ: 46.425.646/0001-11</p>
+                        <span class="bg-green-100 text-green-700 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
+                            Situação Cadastral Ativa
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RODAPÉ FINAL -->
+            <div class="max-w-screen-xl mx-auto px-6 text-center">
+                <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 text-[10px] font-bold text-slate-400 uppercase tracking-widest border-t border-slate-100 pt-6">
+                    <span>Desenvolvedor: Samuel Junio</span>
+                    <span>Polo: Curitiba - PR</span>
+                    <span>Data: 2026</span>
+                </div>
+
+                <p class="mt-4 text-xs text-slate-500 font-medium leading-relaxed">
+                    <strong>Centro Universitário União das Américas Descomplica</strong>.
+                </p>
+
+                <span class="block text-[10px] font-black text-blue-900 uppercase tracking-[0.3em] mb-2">
+                    Projeto de Extensão Universitária
+                </span>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5541992755933"
+       class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-3xl flex items-center justify-center shadow-2xl hover:scale-110 transition-all z-50">
+        <i class="fab fa-whatsapp text-4xl"></i>
+        <span class="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full border-4 border-slate-50 animate-pulse"></span>
+    </a>
+
 </body>
 </html>
